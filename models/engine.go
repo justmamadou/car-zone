@@ -19,7 +19,7 @@ type EngineRequest struct {
 	CarRange      int64 `json:"car_range"`
 }
 
-func validateEngineRequest(engine EngineRequest) error {
+func ValidateEngineRequest(engine EngineRequest) error {
 	if err := validateDisplacement(engine.Displacement); err != nil {
 		return err
 	}
